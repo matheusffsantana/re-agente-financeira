@@ -3,10 +3,10 @@
 ## 1. Visão geral
 
 Os dados mockados foram adaptados para alimentar diretamente a máquina de estados e o
-motor de cálculo do Rê (ver `docs/01-documentacao-agente.md`). Cada campo existe porque
+motor de cálculo da Rê (ver `docs/01-documentacao-agente.md`). Cada campo existe porque
 uma regra de negócio específica depende dele — não há dado "decorativo".
 
-Três clientes fictícios cobrem fases distintas da jornada, permitindo testar o agente em
+Três clientes fictícios cobrem fases distintas da jornada, permitindo testar a Rê em
 pontos diferentes do fluxo sem precisar simular a jornada inteira manualmente a cada teste:
 
 | Cliente | Fase | O que essa fase testa |
@@ -39,13 +39,13 @@ resume em `gastos_fixos`/`gastos_variaveis` vem, na prática, de somar estas lin
 ### `produtos_financeiros.json` — Catálogo de produtos
 Dividido em dois blocos que correspondem a duas fases diferentes da jornada:
 - **`negociacao`**: as opções que o motor de cálculo usa para simular propostas (parcelamento, desconto à vista, refinanciamento), com as taxas necessárias para o cálculo de comprometimento de renda.
-- **`investimento`**: produtos filtrados por `perfil_recomendado`, cruzando com o `perfil_investidor` do cliente — é assim que o Rê evita recomendar um fundo de risco médio para alguém com perfil conservador.
+- **`investimento`**: produtos filtrados por `perfil_recomendado`, cruzando com o `perfil_investidor` do cliente — é assim que a Rê evita recomendar um fundo de risco médio para alguém com perfil conservador.
 
 ## 3. Por que esses dados evitam alucinação
 
 Como definido na Etapa 1, o LLM nunca recebe a tarefa de "lembrar" ou "estimar" esses
 números — o backend sempre busca o valor exato nesses arquivos antes de montar qualquer
-prompt. Isso significa que qualquer dúvida sobre "por que o Rê disse esse valor" tem uma
+prompt. Isso significa que qualquer dúvida sobre "por que a Rê disse esse valor" tem uma
 resposta rastreável: o dado veio de uma linha específica de um desses arquivos, nunca de
 uma inferência do modelo.
 
