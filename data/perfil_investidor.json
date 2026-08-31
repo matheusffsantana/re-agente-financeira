@@ -1,23 +1,52 @@
-{
-  "nome": "João Silva",
-  "idade": 32,
-  "profissao": "Analista de Sistemas",
-  "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
-  "aceita_risco": false,
-  "metas": [
-    {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
+[
+  {
+    "cliente_id": "cli_001",
+    "nome": "Bruna Andrade",
+    "fase": "diagnostico",
+    "renda_mensal": 3200.00,
+    "gastos_fixos": 1800.00,
+    "gastos_variaveis": 900.00,
+    "saldo_devedor": 8500.00,
+    "tentativas_negociacao": 0,
+    "reserva_atual": 0.00,
+    "meta_reserva": 6400.00,
+    "perfil_investidor": null
+  },
+  {
+    "cliente_id": "cli_002",
+    "nome": "Carlos Nogueira",
+    "fase": "aguardando_banco",
+    "renda_mensal": 4500.00,
+    "gastos_fixos": 2600.00,
+    "gastos_variaveis": 700.00,
+    "saldo_devedor": 12000.00,
+    "tentativas_negociacao": 2,
+    "proposta_pendente": {
+      "tipo": "parcelamento",
+      "numero_parcelas": 10,
+      "valor_parcela": 1080.00
     },
-    {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
-      "prazo": "2027-12"
-    }
-  ]
-}
+    "reserva_atual": 0.00,
+    "meta_reserva": 9000.00,
+    "perfil_investidor": null
+  },
+  {
+    "cliente_id": "cli_003",
+    "nome": "Fernanda Lima",
+    "fase": "organizacao",
+    "renda_mensal": 5200.00,
+    "gastos_fixos": 2900.00,
+    "gastos_variaveis": 800.00,
+    "saldo_devedor": 0.00,
+    "tentativas_negociacao": 1,
+    "negociacao_concluida": {
+      "tipo": "parcelamento",
+      "numero_parcelas": 12,
+      "parcelas_pagas": 9,
+      "valor_parcela": 650.00
+    },
+    "reserva_atual": 4800.00,
+    "meta_reserva": 5000.00,
+    "perfil_investidor": "moderado"
+  }
+]

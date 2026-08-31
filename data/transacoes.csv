@@ -1,11 +1,16 @@
-data,descricao,categoria,valor,tipo
-2025-10-01,Salário,receita,5000.00,entrada
-2025-10-02,Aluguel,moradia,1200.00,saida
-2025-10-03,Supermercado,alimentacao,450.00,saida
-2025-10-05,Netflix,lazer,55.90,saida
-2025-10-07,Farmácia,saude,89.00,saida
-2025-10-10,Restaurante,alimentacao,120.00,saida
-2025-10-12,Uber,transporte,45.00,saida
-2025-10-15,Conta de Luz,moradia,180.00,saida
-2025-10-20,Academia,saude,99.00,saida
-2025-10-25,Combustível,transporte,250.00,saida
+data,cliente_id,categoria,tipo,valor,descricao
+2026-08-01,cli_001,salario,entrada,3200.00,Pagamento mensal
+2026-08-05,cli_001,moradia,saida,1200.00,Aluguel
+2026-08-08,cli_001,alimentacao,saida,650.00,Supermercado
+2026-08-10,cli_001,transporte,saida,300.00,Combustível e app de transporte
+2026-08-15,cli_001,cartao_credito,saida,850.00,Pagamento mínimo da fatura atrasada
+2026-08-01,cli_002,salario,entrada,4500.00,Pagamento mensal
+2026-08-05,cli_002,moradia,saida,1800.00,Financiamento do apartamento
+2026-08-08,cli_002,alimentacao,saida,750.00,Supermercado
+2026-08-12,cli_002,educacao,saida,600.00,Mensalidade escolar dos filhos
+2026-08-20,cli_002,cartao_credito,saida,0.00,Fatura em negociação - aguardando confirmação do banco
+2026-08-01,cli_003,salario,entrada,5200.00,Pagamento mensal
+2026-08-05,cli_003,moradia,saida,1600.00,Aluguel
+2026-08-08,cli_003,alimentacao,saida,700.00,Supermercado
+2026-08-10,cli_003,parcela_negociacao,saida,650.00,Parcela 9 de 12 do acordo com o banco
+2026-08-15,cli_003,poupanca,saida,400.00,Aporte na reserva de emergência

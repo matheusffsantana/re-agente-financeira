@@ -1,6 +1,18 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+data,cliente_id,canal,evento,descricao
+2026-05-03,cli_001,agente,diagnostico_iniciado,Cliente relatou dificuldade para pagar fatura do cartão
+2026-05-03,cli_001,agente,dados_coletados,Renda e gastos informados pelo cliente
+2026-04-10,cli_002,banco,proposta_recusada,Cliente recusou parcelamento em 6x por não caber no orçamento
+2026-04-20,cli_002,banco,proposta_recusada,Cliente recusou desconto à vista por falta de capital imediato
+2026-05-15,cli_002,agente,proposta_aceita_pelo_cliente,Cliente aceitou parcelamento em 10x de R$ 1080
+2026-05-15,cli_002,banco,aguardando_confirmacao,Proposta enviada ao banco para autorização
+2025-11-02,cli_003,banco,proposta_aceita_pelo_cliente,Cliente aceitou parcelamento em 12x de R$ 650
+2025-11-05,cli_003,banco,banco_confirmou,Banco autorizou o parcelamento
+2025-12-05,cli_003,banco,parcela_paga,Parcela 1 de 12 confirmada
+2026-01-05,cli_003,banco,parcela_paga,Parcela 2 de 12 confirmada
+2026-02-05,cli_003,banco,parcela_paga,Parcela 3 de 12 confirmada
+2026-03-05,cli_003,banco,parcela_paga,Parcela 4 de 12 confirmada
+2026-04-05,cli_003,banco,parcela_paga,Parcela 5 de 12 confirmada
+2026-05-05,cli_003,banco,parcela_paga,Parcela 6 de 12 confirmada
+2026-06-05,cli_003,banco,parcela_paga,Parcela 7 de 12 confirmada
+2026-07-05,cli_003,banco,parcela_paga,Parcela 8 de 12 confirmada
+2026-08-05,cli_003,banco,parcela_paga,Parcela 9 de 12 confirmada

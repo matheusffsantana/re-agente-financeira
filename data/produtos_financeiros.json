@@ -1,42 +1,56 @@
-[
-  {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
-  },
-  {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
-  },
-  {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
-  },
-  {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
-  },
-  {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
-  }
-]
+{
+  "negociacao": [
+    {
+      "id": "neg_parcelamento",
+      "tipo": "parcelamento",
+      "descricao": "Parcelamento do saldo devedor em até 12x",
+      "juros_ao_mes": 0.019,
+      "max_parcelas": 12
+    },
+    {
+      "id": "neg_desconto_vista",
+      "tipo": "desconto_a_vista",
+      "descricao": "Desconto para quitação à vista",
+      "percentual_desconto": 0.25
+    },
+    {
+      "id": "neg_refinanciamento",
+      "tipo": "refinanciamento",
+      "descricao": "Refinanciamento com prazo estendido",
+      "juros_ao_mes": 0.025,
+      "max_parcelas": 24
+    }
+  ],
+  "investimento": [
+    {
+      "id": "inv_tesouro_selic",
+      "nome": "Tesouro Selic",
+      "tipo": "renda_fixa",
+      "risco": "baixo",
+      "liquidez": "diaria",
+      "rentabilidade_estimada_aa": 0.11,
+      "valor_minimo": 100.00,
+      "perfil_recomendado": ["conservador", "moderado", "arrojado"]
+    },
+    {
+      "id": "inv_cdb_liquidez_diaria",
+      "nome": "CDB 100% do CDI",
+      "tipo": "renda_fixa",
+      "risco": "baixo",
+      "liquidez": "diaria",
+      "rentabilidade_estimada_aa": 0.105,
+      "valor_minimo": 500.00,
+      "perfil_recomendado": ["conservador", "moderado"]
+    },
+    {
+      "id": "inv_fundo_multimercado",
+      "nome": "Fundo Multimercado Moderado",
+      "tipo": "fundo",
+      "risco": "medio",
+      "liquidez": "d+30",
+      "rentabilidade_estimada_aa": 0.13,
+      "valor_minimo": 1000.00,
+      "perfil_recomendado": ["moderado", "arrojado"]
+    }
+  ]
+}
