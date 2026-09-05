@@ -57,8 +57,21 @@ Mensagem do cliente: "{mensagem}"
 """
 PROMPT_CLASSIFICACAO_ESCOPO = """Classifique se a mensagem abaixo está dentro do escopo de um agente de finanças
 pessoais (diagnóstico de dívida, negociação, organização financeira, investimento).
+
+Cumprimentos, agradecimentos, despedidas e perguntas sobre a própria conversa (ex.: "olá",
+"obrigado", "em que fase eu estou?") também contam como DENTRO do escopo — são parte normal
+de uma conversa com o agente, mesmo sem mencionar finanças diretamente.
+
+Só classifique como fora_escopo assuntos genuinamente não relacionados a finanças pessoais
+(ex.: previsão do tempo, esportes, receitas de culinária, política).
+
 Responda APENAS em JSON, sem texto adicional:
 {{"escopo": "dentro_escopo" | "fora_escopo"}}
+
+Exemplos:
+"Olá" -> {{"escopo": "dentro_escopo"}}
+"Em que fase eu estou?" -> {{"escopo": "dentro_escopo"}}
+"Vai chover amanhã?" -> {{"escopo": "fora_escopo"}}
 
 Mensagem do cliente: "{mensagem}"
 """
