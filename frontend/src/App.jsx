@@ -1,20 +1,12 @@
-import { useWebSocket } from "./hooks/useWebSocket";
-import Chat from "./components/Chat";
-import Dashboard from "./components/Dashboard";
-import PropostaBanco from "./components/PropostaBanco";
-
-const CLIENTE_ID = "cli_002";
+import { useState } from "react";
+import SelecaoCliente from "./SelecaoCliente";
+import Conversa from "./Conversa";
 
 export default function App() {
+  const [clienteSelecionado, setClienteSelecionado] = useState(null);
 
-    const { mensagens, faseAtual, proposta, enviarMensagem, enviarDecisao } = useWebSocket(CLIENTE_ID);
-
-    return (
-        <div className="app">
-            <h1>Rê — sua parceira para sair do vermelho</h1>
-            <Dashboard faseAtual={faseAtual} />
-            <PropostaBanco proposta={proposta} aoDecidir={enviarDecisao} />
-            <Chat mensagens={mensagens} aoEnviar={enviarMensagem} />
-        </div>
-    );
+  if (clienteSelecionado === null) {
+    return <SelecaoCliente aoSelecionar={setClienteSelecionado} />;
+  }
+  return <Conversa clienteId={clienteSelecionado} aoVoltar={() => setClienteSelecionado(null)} />;
 }

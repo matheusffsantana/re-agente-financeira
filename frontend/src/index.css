@@ -187,3 +187,49 @@ body {
   font-size: 0.95rem;
   cursor: pointer;
 }
+
+/* Tela de seleção de cliente */
+.selecao-cliente {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.selecao-cliente h1 {
+  font-family: "Newsreader", serif;
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+
+.cliente {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.cliente h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.cliente button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+  cursor: pointer;
+}
+
+.botao-voltar {
+  background: none;
+  border: none;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
