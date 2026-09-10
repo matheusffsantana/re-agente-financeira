@@ -45,6 +45,18 @@ dá uma instrução ("pague R$ 350/mês"), ela explica o raciocínio por trás d
 
 ## 3. Arquitetura
 
+> **Por que não Streamlit?** O lab original da DIO sugeria Streamlit como base. A troca
+> para React + FastAPI foi uma decisão de escalabilidade, não só estética: o Streamlit
+> reexecuta o script inteiro a cada interação do usuário, numa arquitetura fundamentalmente
+> **reativa** — só processa algo quando o próprio usuário interage com a tela. Isso
+> inviabilizaria uma funcionalidade central do projeto: as mensagens **proativas** da Rê,
+> como a comemoração automática de um pagamento confirmado pelo banco, sem o cliente
+> precisar fazer nada. Um backend dedicado com WebSocket permite ao servidor empurrar
+> mensagens a qualquer momento, e separar backend e frontend também permite escalar os
+> dois de forma independente (múltiplos usuários simultâneos, deploy separado, um futuro
+> app mobile consumindo a mesma API) — algo que a arquitetura monolítica do Streamlit não
+> suporta bem em produção.
+
 ### 3.1 Componentes
 
 | Componente | Função |
